@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 
-const crewFields = [
+const crewMembers = [
   {
     name: "Sarah Vega",
     imageUrl: "./crew/image-anousheh-ansari.png",
