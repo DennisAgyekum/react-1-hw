@@ -47,7 +47,7 @@ export default function OurCrew() {
           common goal: to make space travel accessible and exciting for all.
         </h3>
         <div className={styles.crewContainer}>
-          {crewFields.map((crew, index) => (
+          {crewMembers.map((crew, index) => (
             <div className="card" key={index}>
               <div>
                 <img
