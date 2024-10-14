@@ -93,7 +93,7 @@
 .logoContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem; /
+  gap: 1.25rem; 
   justify-content: center;
   align-items: center;
   padding: 1.875rem 1.25rem; 
