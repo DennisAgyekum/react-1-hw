@@ -25,7 +25,11 @@
   color: gray;
   font-size: 6rem;
   font-weight: 700;
+<<<<<<< HEAD
   padding: 1rem 2rem;
+=======
+  padding: 20px 30px
+>>>>>>> f04b6087392cb609eda6d6ddee6fa6f7e4461b21
 }
 
 .ourValues {
