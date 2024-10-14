@@ -9,7 +9,7 @@
  {
   display: grid;
   gap: 20px;
-  padding: 10px;
+  padding: 1rem;
 }
 
 .valueItems{
@@ -23,9 +23,9 @@
 
 .valueTitle {
   color: gray;
-  font-size: 120px;
+  font-size: 6rem;
   font-weight: 700;
-  padding: 20px 30px 20px 30px;
+  padding: 1rem 2rem;
 }
 
 .ourValues {
@@ -34,23 +34,23 @@
 
 .valueDescription {
   line-height: 22px;
-  padding-bottom: 15px;
-  font-size: 15px;
+  padding-bottom: 1rem;
+  font-size: 1rem;
   font-weight: 200;
   line-height: 1.8;
 }
 
 .headerThree,
 .heading {
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: normal;
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 
 
 .crewContainer {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  margin: 20px 40px;
+  margin: 2rem 4rem;
 }
 
 .valueContainer {
@@ -71,22 +71,22 @@
 }
 
 .crewName {
-  margin-top: 20px;
-  font-size: 22px;
+  margin-top: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
 }
 
 .crewTitle {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   text-align: center;
   font-style: italic;
 }
 
 .crewDescription {
-  padding: 5px 0;
-  font-size: 15px;
+  padding: 0.6rem 0;
+  font-size: 1rem;
   font-weight: 100;
   line-height: 1.2;
   text-align: center;
@@ -99,11 +99,11 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
-  padding: 30px 20px;
+  padding: 3rem 2rem;
 }
 
 .logoDiv {
-  padding: 15px;
+  padding: 0.5rem;
   height: 100px;
 }
 
