@@ -3,3 +3,120 @@
   width: 100vw;
   height: 100vh;
 }
+
+.crewContainer,
+.valueContainer {
+  display: grid;
+  gap: 1.25rem; 
+  padding: 0.625rem;
+}
+
+.valueItems {
+  display: flex;
+  align-items: center;
+}
+
+.value {
+  border-bottom: 1px solid rgba(88, 95, 137, 0.755);
+}
+
+.valueTitle {
+  color: gray;
+  font-size: 7.5rem; 
+  font-weight: 700;
+  padding: 1.25rem 1.875rem; 
+}
+
+.ourValues {
+  font-weight: 600;
+}
+
+.valueDescription {
+  line-height: 1.375rem; 
+  padding-bottom: 0.9375rem; 
+  font-size: 0.9375rem; 
+  font-weight: 200;
+  line-height: 1.8;
+}
+
+.headerThree,
+.heading {
+  font-size: 0.9375rem; 
+  font-weight: normal;
+  margin-top: 0.625rem; 
+}
+
+.crewContainer {
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); 
+  margin: 1.25rem 2.5rem; 
+}
+
+.valueContainer {
+  grid-template-columns: 1fr 1fr;
+}
+
+.crewImage {
+  width: 100%;
+  height: 15.625rem; 
+  background-color: rgba(88, 95, 137, 0.755);
+  cursor: pointer;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.crewImage:hover {
+  transform: scale(1.1);
+}
+
+.crewName {
+  margin-top: 1.25rem; 
+  font-size: 1.375rem; 
+  font-weight: 400;
+  text-align: center;
+}
+
+.crewTitle {
+  font-size: 1rem; 
+  font-weight: 300;
+  text-align: center;
+  font-style: italic;
+}
+
+.crewDescription {
+  padding: 0.3125rem 0; 
+  font-size: 0.9375rem; 
+  font-weight: 100;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.logoContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem; 
+  justify-content: center;
+  align-items: center;
+  padding: 1.875rem 1.25rem; 
+}
+
+.logoDiv {
+  padding: 0.9375rem; 
+  height: 6.25rem;
+}
+
+.logoImage {
+  width: 70%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .crewContainer,
+  .valueContainer {
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr)); 
+  }
+
+  .logoContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
