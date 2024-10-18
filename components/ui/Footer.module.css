@@ -46,3 +46,16 @@
 .footerList li {
   padding-block: var(--spacing-04);
 }
+
+.pages ul {
+  list-style-type: none;
+}
+.pages li {
+  padding-block: var(--spacing-04);
+}
+
+.mediaLinks{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-20);
+}

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import styles from './destination.module.css';
 
-export const AddWishlistItem = ({
+export  const AddWishlistItem = ({
   onAddWishlistItem,
 }) => {
   const [thumbnail, onThumbnailChange] = useState('/destination/image-europa.png');
@@ -36,3 +36,4 @@ export const AddWishlistItem = ({
     </div>
   );
 };
+ export default AddWishlistItem
