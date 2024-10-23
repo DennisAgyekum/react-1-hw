@@ -100,7 +100,7 @@ export const Destinations = () => {
               description={item.description}
               thumbnail={item.thumbnail}
               isSelected={selectedPlanets.includes(item.name)}
-              onAddOrRemovePlanet={() => togglePlanetSelection(item.name)}
+              onAddOrRemovePlanet={() => togglePlanetSelection(item.name, index)}
             />
           ))}
         </section>
