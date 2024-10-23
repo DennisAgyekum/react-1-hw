@@ -26,7 +26,7 @@ export default function PlanetCards({
         <button
           className={`${styles.roundButton} ${isSelected ? styles.selected : ''}`}
           aria-pressed={isSelected}
-          onClick={() => onAddOrRemovePlanet(name, index)}
+          onClick={() => onAddOrRemovePlanet(name)}
         >
           {isSelected ? "REMOVE" : "ADD PLANET"}
         </button>
