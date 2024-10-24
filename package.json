@@ -2,10 +2,12 @@
   "name": "space-turism",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
+    
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",

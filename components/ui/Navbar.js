@@ -42,9 +42,6 @@ export const Navbar = () => {
             />
           ))}
 
-         
-          {/* TASK - React 1 week 3 */}
-          {/* replace repeating content by using navbarItems.map(() => <NavLink />) */}
         </ul>
       </nav>
     </header>
