@@ -1,12 +1,66 @@
-.app {
-  background-color: black;
+ .app {
   width: 100vw;
   height: 100vh;
 }
+  .astronomyContainer {
+    margin-top: 20px;
+  }
+  
+  .astronomyPic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .astronomyPic p {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  .roverContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+ 
+  .roverText {
+    text-align: center;
+    
+   
+  } 
+  
+  .roverPhotoCard img {
+    object-fit: cover;
+    width: 220px;
+    height: 300px;
+  }
+  
+  .roverPhotoCard h3 {
+    font-size: 1.2rem;
+    color: #dbe1e8;
+    margin: 10px 0;
+  }
+  
+  .roverPhotoCard p {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  @media (max-width: 768px) {
+    .mainContent {
+      padding: 20px;
+    }
+  
+    .card h2 {
+      font-size: 1.5rem;
+    }
+  
+    .roverPhotoCard {
+      width: 100%;
+    }
+  }
 
-
-.nasaPicOfTheDayImg {
-  width: auto;
-  height: 400px;
-
-}
+  
