@@ -2,22 +2,22 @@
   width: 100vw;
   height: 100vh;
 }
-  .astronomyContainer {
+  .astronomy-container {
     margin-top: 20px;
   }
   
-  .astronomyPic {
+  .astronomy-pic {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
   
-  .astronomyPic p {
+  .astronomy-pic p {
     font-size: 1rem;
     color: #ccc;
   }
   
-  .roverContainer {
+  .rover-container {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -26,31 +26,31 @@
   }
   
  
-  .roverText {
+  .rover-text {
     text-align: center;
     
    
   } 
   
-  .roverPhotoCard img {
+  .rover-photo-card img {
     object-fit: cover;
     width: 220px;
     height: 300px;
   }
   
-  .roverPhotoCard h3 {
+  .rover-photo-card h3 {
     font-size: 1.2rem;
     color: #dbe1e8;
     margin: 10px 0;
   }
   
-  .roverPhotoCard p {
+  .rover-photo-card p {
     font-size: 0.9rem;
     color: #ccc;
   }
   
   @media (max-width: 768px) {
-    .mainContent {
+    .main-content {
       padding: 20px;
     }
   
@@ -58,7 +58,7 @@
       font-size: 1.5rem;
     }
   
-    .roverPhotoCard {
+    .rover-photo-card {
       width: 100%;
     }
   }
