@@ -1,28 +1,30 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import styles from "./page.module.css"
+import React, { useState, useEffect } from "react";
+import styles from "./page.module.css";
 
-const API_KEY = 'TaA8BgllKVYPCxHa4t6SkF5NemO6QmTGv4lwvRkM';
+const API_KEY = "TaA8BgllKVYPCxHa4t6SkF5NemO6QmTGv4lwvRkM";
 
 const NASA_URLs = {
-  astronomyPicOfTheDay:  `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`,
+  astronomyPicOfTheDay: `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`,
   marsRoverPhoto: `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=${API_KEY}`,
 };
 
-  const RoverPhoto = ({src, date, roverName}) => {
+const RoverPhoto = ({ src, date, roverName }) => {
   return (
-      <div className={styles.nasaPicOfTheDayImg}>
-          <img src={src} alt={`Rover: ${roverName} on ${date}`}/>
-          <p className={styles.rover-text}>{`Date: ${date}`}</p>
-          <p className={styles.rover-text}>{`Rover: ${roverName}`}</p>
-      </div>
+    <div className={styles.nasaPicOfTheDayImg}>
+      <img src={src} alt={`Rover: ${roverName} on ${date}`} />
+      <p className={styles.roverText}>{`Date: ${date}`}</p>
+      <p className={styles.roverText}>{`Rover: ${roverName}`}</p>
+    </div>
   );
-}
- 
+};
+
 export const NasaCollaboration = () => {
   const [dailyImg, setDailyImg] = useState({});
   const [roverPhoto, setRoverPhoto] = useState({});
+  const [astronomyError, setAstronomyError] = useState(null);
+  const [roverError, setRoverError] = useState(null);
 
   useEffect(() => {
     const fetchRoverPhotos = async () => {
@@ -32,6 +34,7 @@ export const NasaCollaboration = () => {
         setRoverPhoto(data);
       } catch (error) {
         console.error("Error fetching Mars rover photo:", error);
+        setRoverError("Failed to fetch Mars rover photos. Please try again later.");
       }
     };
 
@@ -42,6 +45,7 @@ export const NasaCollaboration = () => {
         setDailyImg(data);
       } catch (error) {
         console.error("Error fetching astronomy picture of the day:", error);
+        setAstronomyError("Failed to fetch the Astronomy Picture of the Day. Please try again later.");
       }
     };
 
@@ -53,40 +57,45 @@ export const NasaCollaboration = () => {
     <div className="fullBGpicture">
       <main className="mainContent">
         <h1>Collaboration with NASA</h1>
+
         <section className="card">
           <h2>Astronomy Picture of the Day</h2>
-          <div className={styles.astronomy-container}>
-            <h3>{dailyImg.title}</h3>
-            <div className={styles.astronomy-pic}>
-              <img src={dailyImg.url} alt="Pillars of Creation" />
-              <p>{dailyImg.explanation}</p>
+          {astronomyError ? (
+            <p className={styles.errorMessage}>{astronomyError}</p>
+          ) : (
+            <div className={styles.astronomyContainer}>
+              <h3>{dailyImg.title}</h3>
+              <div className={styles.astronomyPic}>
+                <img src={dailyImg.url} alt="Astronomy Picture" />
+                <p>{dailyImg.explanation}</p>
+              </div>
             </div>
-          </div>
+          )}
         </section>
 
-       { <section className="card">
+        <section className="card">
           <h2>Rover Photos</h2>
-          {roverPhoto.photos?.length? (
-            <div className={styles.rover-container}>
-              {roverPhoto.photos.map((item, index) => (
-                <div className={styles.rover-photo-card} key={item.id}>
-                   <RoverPhoto
-                  key={index} 
-                  src={item.img_src} 
-                  date={item.earth_date}
-                  roverName={item.rover.name}
-                />
+          {roverError ? (
+            <p className={styles.errorMessage}>{roverError}</p>
+          ) : roverPhoto.photos?.length ? (
+            <div className={styles.roverContainer}>
+              {roverPhoto.photos.map((item) => (
+                <div className={styles.roverPhotoCard} key={item.id}>
+                  <RoverPhoto
+                    src={item.img_src}
+                    date={item.earth_date}
+                    roverName={item.rover.name}
+                  />
                 </div>
               ))}
             </div>
           ) : (
             <p>Loading rover photos...</p>
           )}
-        </section>}
+        </section>
       </main>
     </div>
   );
 };
-
 
 export default NasaCollaboration;
