@@ -14,8 +14,8 @@ const NASA_URLs = {
   return (
       <div className={styles.nasaPicOfTheDayImg}>
           <img src={src} alt={`Rover: ${roverName} on ${date}`}/>
-          <p className={styles.roverText}>{`Date: ${date}`}</p>
-          <p className={styles.roverText}>{`Rover: ${roverName}`}</p>
+          <p className={styles.rover-text}>{`Date: ${date}`}</p>
+          <p className={styles.rover-text}>{`Rover: ${roverName}`}</p>
       </div>
   );
 }
@@ -55,9 +55,9 @@ export const NasaCollaboration = () => {
         <h1>Collaboration with NASA</h1>
         <section className="card">
           <h2>Astronomy Picture of the Day</h2>
-          <div className={styles.astronomyContainer}>
+          <div className={styles.astronomy-container}>
             <h3>{dailyImg.title}</h3>
-            <div className={styles.astronomyPic}>
+            <div className={styles.astronomy-pic}>
               <img src={dailyImg.url} alt="Pillars of Creation" />
               <p>{dailyImg.explanation}</p>
             </div>
@@ -67,9 +67,9 @@ export const NasaCollaboration = () => {
        { <section className="card">
           <h2>Rover Photos</h2>
           {roverPhoto.photos?.length? (
-            <div className={styles.roverContainer}>
+            <div className={styles.rover-container}>
               {roverPhoto.photos.map((item, index) => (
-                <div className={styles.roverPhotoCard} key={item.id}>
+                <div className={styles.rover-photo-card} key={item.id}>
                    <RoverPhoto
                   key={index} 
                   src={item.img_src} 
