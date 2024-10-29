@@ -34,7 +34,9 @@ export const NasaCollaboration = () => {
         setRoverPhoto(data);
       } catch (error) {
         console.error("Error fetching Mars rover photo:", error);
-        setRoverError("Failed to fetch Mars rover photos. Please try again later.");
+        setRoverError(
+          "Failed to fetch Mars rover photos. Please try again later."
+        );
       }
     };
 
@@ -45,7 +47,9 @@ export const NasaCollaboration = () => {
         setDailyImg(data);
       } catch (error) {
         console.error("Error fetching astronomy picture of the day:", error);
-        setAstronomyError("Failed to fetch the Astronomy Picture of the Day. Please try again later.");
+        setAstronomyError(
+          "Failed to fetch the Astronomy Picture of the Day. Please try again later."
+        );
       }
     };
 
@@ -61,11 +65,11 @@ export const NasaCollaboration = () => {
         <section className="card">
           <h2>Astronomy Picture of the Day</h2>
           {astronomyError ? (
-            <p className={styles.errorMessage}>{astronomyError}</p>
+            <p className={styles["error-message"]}>{astronomyError}</p>
           ) : (
-            <div className={styles.astronomyContainer}>
+            <div className={styles["astronomy-container"]}>
               <h3>{dailyImg.title}</h3>
-              <div className={styles.astronomyPic}>
+              <div className={styles["astronomy-pic"]}>
                 <img src={dailyImg.url} alt="Astronomy Picture" />
                 <p>{dailyImg.explanation}</p>
               </div>
@@ -76,11 +80,11 @@ export const NasaCollaboration = () => {
         <section className="card">
           <h2>Rover Photos</h2>
           {roverError ? (
-            <p className={styles.errorMessage}>{roverError}</p>
+            <p className={styles["error-message"]}>{roverError}</p>
           ) : roverPhoto.photos?.length ? (
-            <div className={styles.roverContainer}>
+            <div className={styles["rover-container"]}>
               {roverPhoto.photos.map((item) => (
-                <div className={styles.roverPhotoCard} key={item.id}>
+                <div className={styles["rover-photo-card"]} key={item.id}>
                   <RoverPhoto
                     src={item.img_src}
                     date={item.earth_date}
