@@ -102,6 +102,11 @@
   background-color: gray;
 }
 
+.addWishListButton{
+  background-color: gray;
+  border-radius: 10px;
+}
+
 .selected {
   background-color: red; 
   color: white;
